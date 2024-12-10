@@ -1,5 +1,5 @@
 """
-URL configuration for test_on_docker_app project.
+URL configuration for unittest_test_app project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('app_module1.urls'), name='base')
+    path('', include('test_library_app.urls'))
 ]
