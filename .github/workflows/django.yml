@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          python testing_cicd_django/manage.py test
+          python ../manage.py test
 
   deploy:
     if: github.ref == 'refs/heads/main'
