@@ -24,6 +24,7 @@ jobs:
 
       - name: Run Tests
         run: |
+          ls -al
           python ../manage.py test
 
   deploy:
