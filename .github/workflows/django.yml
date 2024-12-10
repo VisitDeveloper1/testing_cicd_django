@@ -25,7 +25,7 @@ jobs:
       - name: Run Tests
         run: |
           ls -al
-          python test_on_docker_app/manage.py test
+          python unittest_test_app/manage.py test
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -46,7 +46,7 @@ jobs:
             git pull origin main
             source venv/bin/activate
             pip install -r requirements.txt
-            python test_on_docker_app/manage.py makemigrations
-            python test_on_docker_app/manage.py migrate
-            # python test_on_docker_app/manage.py collectstatic --noinput
+            python unittest_test_app/manage.py makemigrations
+            python unittest_test_app/manage.py migrate
+            # python unittest_test_app/manage.py collectstatic --noinput
             # systemctl restart systemctl
