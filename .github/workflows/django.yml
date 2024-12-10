@@ -25,7 +25,7 @@ jobs:
       - name: Run Tests
         run: |
           ls -al
-          python ../manage.py test
+          python test_on_docker_app/manage.py test
 
   deploy:
     if: github.ref == 'refs/heads/main'
